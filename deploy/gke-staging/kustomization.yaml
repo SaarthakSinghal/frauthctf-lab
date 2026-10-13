@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../k8s
+  - namespace.yaml
+  - workspace-deny.yaml
+
+images:
+  - name: frauthctf
+    newName: us-central1-docker.pkg.dev/project-c0d45d76-3401-4e2c-844/frauth-images/app
+    digest: sha256:42ed5aec1d8e2fb96aae18a28e6d35d184f9f0cf519092109db27846175258c6
+
+patches:
+  - target:
+      version: v1
+      kind: PersistentVolumeClaim
+      name: p001-state
+    patch: |-
+      - op: add
+        path: /spec/storageClassName
+        value: standard-rwo
+      - op: replace
+        path: /spec/resources/requests/storage
+        value: 10Gi

@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - workspace-p001.yaml
+  - workspace-p002.yaml
+  - pvc-p001.yaml
