@@ -1,0 +1,11 @@
+{
+  "extends": "$app/tsconfig",
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "checkJs": false,
+    "allowImportingTsExtensions": true
+  },
+  "include": ["src", "tests", "*.ts"],
+  "exclude": ["node_modules", "build", ".toolchain"]
+}

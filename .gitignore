@@ -1,0 +1,14 @@
+node_modules/
+.toolchain/
+.svelte-kit/
+build/
+test-build/
+.env*
+!.env.example
+data/
+test-results/
+playwright-report/
+docs/private/
+deep-research-report-auth.md
+debug.log
+clip

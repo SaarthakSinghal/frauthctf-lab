@@ -1,0 +1,46 @@
+{
+  "incremental": false,
+  "json": {
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "markdown": {
+    "lineWidth": 100,
+    "textWrap": "maintain"
+  },
+  "biome": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "json.enabled": false
+  },
+  "malva": {
+    "indentWidth": 2,
+    "printWidth": 100
+  },
+  "markup": {
+    "indentWidth": 2,
+    "printWidth": 100,
+    "scriptFormatter": "dprint"
+  },
+  "excludes": [
+    "**/*-lock.json",
+    "**/node_modules",
+    ".toolchain",
+    ".svelte-kit",
+    "build",
+    "test-build",
+    "data",
+    "test-results",
+    "playwright-report",
+    "docs/private",
+    ".env*"
+  ],
+  "plugins": [
+    "npm:@dprint/json@0.25.2",
+    "npm:@dprint/markdown@0.26.0",
+    "npm:@dprint/biome@0.14.0",
+    "npm:dprint-plugin-malva@0.16.0",
+    "npm:dprint-plugin-markup@0.27.6"
+  ]
+}
